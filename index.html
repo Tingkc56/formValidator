@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validator</title>
+</head>
+<body>
+
+    <div class="form-group contact m-auto">
+        <h1 class="text-center">Nous contacter</h1>
+        <form  class="form contact-form" action="hello.html" method="post" >
+        <!-- 只要按下面的submit就会产生action，会去寻找contactMail这个function -->
+            <label for="usr">Nom</label>
+            <input class="form-control form-name check" type="text" id="usr" name="name" placeholder="Votre nom">
+    
+            <label for="mail">Email</label>
+            <input class="form-control form-mail check" type="email" id="mail" name="mail" placeholder="Votre email">
+
+            <label for="i-pass">Mot de pass:</label>
+            <input type="password" class="form-control psw psw1" placeholder="Votre Mot de passe *" name="pass" id="i-pass">
+
+            <label for="check-pass">Confirmer mot de pass:</label>
+            <input type="password" class="form-control psw psw2" placeholder="Confirmer votre Mot de passe *" name="pass" id="check-pass">
+
+            <!-- conclick没有return的话就算验证不通过也会跳转哦 -->
+            <button type="submit" onclick="return validateForm()">Valider</button>
+
+        </form>
+    </div>
+<form action="coucou.html">
+    <label for="name">Sujet</label>
+    <input class="form-control form-subject check" type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
+    <button type="submit" onclick="return validateForm()">Valider</button>
+</form>
+   
+        <script src="validator.js"></script>
+</body>
+</html>
